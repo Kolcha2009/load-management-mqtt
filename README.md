@@ -32,11 +32,11 @@ Typical use case: monitoring the state of a 3-phase heating element (Ohm load) c
 2. Download chromedriver.exe and place it in your script folder or system PATH.
 
 3. Edit the script configuration:
-   url = "http://192.168.X.X/"        # Inverter IP
-   password = "PASSWORD"              # Customer password
-   mqtt_broker = "192.168.X.X"        # MQTT broker IP
-   mqtt_user = "youruser"
-   mqtt_pass = "yourpassword"
+- url = "http://192.168.X.X/"        # Inverter IP
+- password = "PASSWORD"              # Customer password
+- mqtt_broker = "192.168.X.X"        # MQTT broker IP
+- mqtt_user = "youruser"
+- mqtt_pass = "yourpassword"
 
 ## MQTT Topics
 The script publishes:
