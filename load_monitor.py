@@ -12,8 +12,8 @@ url = "http://192.168.X.X/"   # Inverter IP
 password = "PASSWORD"         # Password for your Inverter
 mqtt_broker = "192.168.X.X"   # MQTT broker IP
 mqtt_port = 1883
-mqtt_user = "YOUR.USERNAME"
-mqtt_pass = "YOUR.PASSWORD"
+mqtt_user = "youruser"
+mqtt_pass = "yourpassword"
 mqtt_topic_base = "load/status"
 polling_interval = 60 # seconds
 # max_laufzeit = 60 * 60  # z. B. 1 Stunde (optional beenden nach 1h)
@@ -52,7 +52,7 @@ try:
     time.sleep(5)
 
     # Letzter Status zum Vergleich
-    last state = ["", "", "", ""]
+    last_state = ["", "", "", ""]
 
     starttime = time.time()
 
@@ -70,9 +70,9 @@ try:
                 status_liste.append(f"unknown")
 
         # Nur senden wenn sich etwas geändert hat
-        if status_liste != last state:
+        if status_liste != last_state:
             print("state changed:", status_liste)
-            last state = status_liste.copy()
+            last_state = status_liste.copy()
 
             messages = []
             for i, s in enumerate(status_liste, start=1):
@@ -98,7 +98,7 @@ try:
 
         print(f"last update sent: {timestamp}")
 
-        polling_interval = 60  # seconds
+        time.sleep(polling_interval)
 
         # Optional nach Zeit abbrechen
 #        if time.time() - startzeit > max_laufzeit:
