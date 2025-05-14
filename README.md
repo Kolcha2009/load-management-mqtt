@@ -37,7 +37,6 @@ Typical use case: monitoring the state of a 3-phase heating element (Ohm load) c
 - mqtt_broker = "192.168.X.X"                        # MQTT broker IP
 - mqtt_user = "youruser"                             # MQTT User Name
 - mqtt_pass = "yourpassword"                         # MQTT Password
-- driver.get("http://192.168.X.X/#/load-management") # fill in your inverter IP
 
 ## MQTT Topics
 The script publishes:
