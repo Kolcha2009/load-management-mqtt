@@ -48,7 +48,7 @@ try:
     time.sleep(3)
 
     # Lastmanagement-Seite öffnen
-    driver.get("http://192.168.X.X/#/load-management") # fill in your inverter IP
+    driver.get(url + "/#/load-management") # fill in your inverter IP
     time.sleep(5)
 
     # Letzter Status zum Vergleich
