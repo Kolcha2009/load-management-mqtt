@@ -53,19 +53,21 @@ loadmanagement/status/last_update → ISO timestamp of last update
 
 ## Example Home Assistant config:
 
-mqtt:
-  sensor:
-    - name: Load Phase 1
-      state_topic: "loadmanagement/status/phase1"
-    - name: Load Phase 2
-      state_topic: "loadmanagement/status/phase2"
-    - name: Load Phase 3
-      state_topic: "loadmanagement/status/phase3"
-    - name: Load Phase 4
-      state_topic: "loadmanagement/status/phase4"
-    - name: Load Management Last Update
-      state_topic: "loadmanagement/status/last_update"
-      device_class: timestamp
+  mqtt:
+
+    sensor:
+  
+      - name: Load Phase 1
+        state_topic: "loadmanagement/status/phase1"
+      - name: Load Phase 2
+        state_topic: "loadmanagement/status/phase2"
+      - name: Load Phase 3
+        state_topic: "loadmanagement/status/phase3"
+      - name: Load Phase 4
+        state_topic: "loadmanagement/status/phase4"
+      - name: Load Management Last Update
+        state_topic: "loadmanagement/status/last_update"
+        device_class: timestamp
 
 ## Notes
 Fronius does not expose load management relay status via official API or Modbus – only via the web interface.
